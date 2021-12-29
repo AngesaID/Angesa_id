@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
     <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}">
 
+    <script type="text/javascript">
+        function success() {
+            if(document.getElementById("inputtext").value==="" && document.getElementById("inputtext").value<=3) { 
+                   document.getElementById('button').disabled = true; 
+               } else { 
+                   document.getElementById('button').disabled = false;
+               }
+           }
+    </script>
+
 </head>
 
 <body id="page-top">
@@ -51,12 +61,10 @@
     </section>
     <section class="text-center download-section content-section" id="download" style="background-image:url('static/img/downloads-bg.jpg');">
         <div class="container">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-12 mx-auto">
                 <h1>DEMO</h1>
-                <p>at this prototype stage, we just completed the typo checking feature. However, other features will be available soon</p>
-                <textarea class="form-control" rows="7" placeholder="Paste your text..."></textarea>
-                <br>
-                <button class="btn btn-lg btn-outline-primary" style = "width:100%" type="button">Submit</button>
+                <p>at this prototype stage, we just completed the typo and slang checker feature. However, other features will be available soon</p>
+                <a class="btn btn-primary btn-lg btn-default" type="button" href="{{ url_for('demo_page') }}">Visit demo page</a>
             </div>
         </div>
     </section>

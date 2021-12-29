@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Angesa.id</title>
+    <meta name="description" content="Angesa.id, is an Indonesia writing assistant platforms that correct contextual spelling errors, check for common grammatical errors, provide alternative word equivalents, and provide citation suggestions based on website application and extensions powered by Artificial Intelligence (AI).">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}">
+
+    <script type="text/javascript">
+        function success() {
+            if(document.getElementById("inputtext").value==="" && document.getElementById("inputtext").value<=3) { 
+                   document.getElementById('button').disabled = true; 
+               } else { 
+                   document.getElementById('button').disabled = false;
+               }
+           }
+    </script>
+
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="{{ url_for('home_page') }}">Angesa.id</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item nav-link js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="{{ url_for('home_page') }}">About</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger"><a class="nav-link js-scroll-trigger" href="{{ url_for('demo_page') }}">DEMO</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger"><a class="nav-link js-scroll-trigger" href="{{ url_for('home_page') }}">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="text-center download-section content-section" id="download" style="background-image:url('static/img/downloads-bg.jpg');">
+        <div class="container">
+            <div class="col-lg-12 mx-auto">
+                <h1>DEMO</h1>
+                <p>at this prototype stage, we just completed the typo and slang checker feature. However, other features will be available soon</p>
+                <form class="form-horizontal" method="POST">
+                    <div class="row">
+                    <div class="col-sm-4 col-md-7">
+                    <textarea class="form-control" rows="7" id="inputtext" name="inputtext" rows="7" placeholder="Paste your text..." onkeyup="success()" maxlength="350" minlength="5" >{{ initialtext }}</textarea>
+                    <br>
+                    <button class="btn btn-lg btn-outline-primary" id="button" style = "width:100%" type="submit" disabled>Submit</button>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <textarea class="form-control" rows="7" readonly>{{ finaltext }}</textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="map-clean"></div>
+        <footer>
+            <div class="container text-center">
+                <p>Copyright ©&nbsp;Angesa.id 2021</p>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename='js/jquery.min.js'  ) }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
+</body>
+
+</html>
