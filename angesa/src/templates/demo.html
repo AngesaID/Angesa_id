@@ -19,6 +19,23 @@
                    document.getElementById('button').disabled = false;
                }
            }
+
+        function copy() {
+            /* Get the text field */
+            var copyText = document.getElementById("outputtext");
+          
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+          
+             /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value);
+          
+          }
+
+          $('#button').on('click',function(){
+            $('#buttoncopy').attr('disabled', false);
+          });
     </script>
 
 </head>
@@ -43,12 +60,14 @@
                 <form class="form-horizontal" method="POST">
                     <div class="row">
                     <div class="col-sm-4 col-md-7">
-                    <textarea class="form-control" rows="7" id="inputtext" name="inputtext" rows="7" placeholder="Try 'Unyil prg ke j4karta utk menimba ilmu'" onkeyup="success()" maxlength="350" minlength="5" >{{ initialtext }}</textarea>
+                    <textarea class="form-control" rows="7" id="inputtext" name="inputtext" rows="7" spellcheck="false" placeholder="Try 'Unyil prg ke j4karta utk menimba ilmu'" onkeyup="success()" maxlength="350" minlength="5" value={{ initialtext }}>{{ initialtext }}</textarea>
                     <br>
                     <button class="btn btn-lg btn-outline-primary" id="button" style = "width:100%" type="submit" disabled>Submit</button>
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <textarea class="form-control" rows="7" placeholder="Output text here..." readonly>{{ finaltext }}</textarea>
+                        <textarea class="form-control" rows="7" id="outputtext" placeholder="Output text here..." onkeyup="output()" readonly>{{ finaltext }}</textarea>
+                        <br>
+                        <button class="btn btn-lg btn-outline-primary" id="buttoncopy" style = "width:100%" type="button" onclick="copy()">Copy Text</button>
                     </div>
                 </form>
             </div>
