@@ -33,9 +33,6 @@
           
           }
 
-          $('#button').on('click',function(){
-            $('#buttoncopy').attr('disabled', false);
-          });
     </script>
 
 </head>
@@ -67,7 +64,7 @@
                     <div class="col-sm-4 col-md-4">
                         <textarea class="form-control" rows="7" id="outputtext" placeholder="Output text here..." onkeyup="output()" readonly>{{ finaltext }}</textarea>
                         <br>
-                        <button class="btn btn-lg btn-outline-primary" id="buttoncopy" style = "width:100%" type="button" onclick="copy()">Copy Text</button>
+                        <button class="btn btn-lg btn-outline-primary" id="buttoncopy" style = "width:100%" type="button" onclick="copy()" >Copy Text</button>
                     </div>
                 </form>
             </div>
