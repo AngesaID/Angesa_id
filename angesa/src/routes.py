@@ -5,7 +5,6 @@ from src.models import typechecker
 
 
 
-InputText = []
 @app.route('/')
 @app.route('/home')
 def home_page():
