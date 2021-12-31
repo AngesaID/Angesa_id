@@ -9,7 +9,7 @@
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: rgba(15,128,86,0.88) url(../../assets/img/to-top.png) no-repeat center 50%;
+  background: rgba(15,128,86,0.88) url(../../static/img/to-top.png) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
