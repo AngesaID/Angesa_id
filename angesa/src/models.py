@@ -1,5 +1,3 @@
-from gensim.models import fasttext
-from gensim.models.fasttext import load_facebook_model
 import re
 import pickle
 import itertools
@@ -57,8 +55,11 @@ def edits2(word):
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
 
 
-with open("src/source/slang.txt") as f:
+with open("src/source/slang_corpus.txt") as f:
     slangS = json.loads(f.read())
+    
+with open("src/source/formal.txt") as f:
+    formalS = json.loads(f.read())
     
     
 def typechecker(T):
@@ -71,7 +72,11 @@ def typechecker(T):
     for index,text in enumerate(_spelling):
         if text in slangS.keys():
             _spelling[index] = slangS[text]
-    
+
+    for index,text in enumerate(_spelling):
+        if text in formalS.keys():
+            _spelling[index] = formalS[text]
+              
     _text = ' '.join(_spelling)
     _text = re.sub(r' ([^A-Za-z0-9])', r'\1', _text)
     

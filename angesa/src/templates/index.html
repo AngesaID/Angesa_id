@@ -9,90 +9,151 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Almendra+SC">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire+Swash">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Text">
     <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}">
-
-    <script type="text/javascript">
-        function success() {
-            if(document.getElementById("inputtext").value==="" && document.getElementById("inputtext").value<=3) { 
-                   document.getElementById('button').disabled = true; 
-               } else { 
-                   document.getElementById('button').disabled = false;
-               }
-           }
-    </script>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/card-3-column-animation-shadows-images.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Contact-Form-Clean.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Newsletter-Subscription-Form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Scroll-to-top-1.css') }}">
+<link href = "static/img/icon.png"
+rel = "static/img/icon.png">
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#">Angesa.id</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item nav-link js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger"><a class="nav-link js-scroll-trigger" href="#download">DEMO</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger"><a class="nav-link js-scroll-trigger" href="#contact">contact</a></li>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" data-aos="slide-down" data-aos-duration="600" data-aos-once="true" id="mainNav" style="color: rgb(0,0,0);background: #ededed;border-style: none;height: 85.4px;">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#" style="color: #222222;border-style: none;font-family: 'DM Serif Display', serif;font-size: 27px;">Angesa.id</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu" style="color: #222222;border-style: none;"><i class="fa fa-bars" style="color: #222222;border-style: none;"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="color: #222222;border-style: none;">
+                <ul class="navbar-nav ml-auto" style="color: #222222;border-style: none;">
+                    <li class="nav-item nav-link js-scroll-trigger" style="color: #222222;border-style: none;"><a class="nav-link active js-scroll-trigger" data-bss-hover-animate="pulse" href="#about" style="color: #222222;border-style: none;font-size: 18px;">About</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" style="color: #222222;border-style: none;font-size: 18px;"><a class="nav-link js-scroll-trigger" data-bss-hover-animate="pulse" href="#antrian" style="color: #222222;border-style: none;font-size: 18px;">Cara</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" style="color: #222222;border-style: none;font-size: 18px;"><a class="nav-link js-scroll-trigger" data-bss-hover-animate="pulse" href="#contact" style="color: #222222;border-style: none;font-size: 18px;">Harga</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" style="color: #222222;border-style: none;font-size: 18px;"><a class="nav-link js-scroll-trigger" data-bss-hover-animate="pulse" href="#kontak" style="color: #222222;border-style: none;font-size: 18px;">kontak</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" style="color: #222222;border-style: none;font-size: 18px;"><a class="nav-link js-scroll-trigger" data-bss-hover-animate="pulse" href="{{ url_for('comming_soon_page') }}" style="color: #ededed;border-style: none;background: #0f8056;border-radius: 12px;font-size: 18px;">sign in</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="masthead" style="background-image:url('static/img/intro-bg.jpg');">
+    <header class="masthead" style="background: url(&quot;static/img/pencil%20brrrr.png&quot;) center / cover;">
         <div class="intro-body">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading">Angesa.id</h1>
-                        <p class="intro-text">A free Indonesia writting improvement<br>Created with love.</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a>
+                <div class="row" id="home" data-aos="zoom-in-up" data-aos-duration="600" style="background: rgba(232,232,232,0.44);height: 358.4px;margin-right: -26px;margin-left: -26px;border-radius: 75px;border-style: none;border-color: rgb(95,47,47);">
+                    <div class="col-lg-8 mx-auto" style="width: 661px;">
+                        <h1 class="brand-heading" style="color: rgb(34,34,34);margin-top: 42px;margin-bottom: 50px;">angesa.id</h1>
+                        <p class="intro-text" style="color: rgb(34,34,34);margin-top: -50px;margin-bottom: 5px;">Buat tulisan yang berani, jelas, dan bebas kesalahan <br>dengan asisten penulisan&nbsp;</p>
+                        <a class="btn btn-primary btn-lg btn-default" role="button" data-bss-hover-animate="pulse" href="{{ url_for('demo_free_page') }}" style="width: 244px;height: 60.6px;color: rgb(15,128,86);border-width: 3px;border-color: rgb(15,128,86);border-radius: 16px;margin: 9px;"><span class="network-name" style="font-size: 24px;">&nbsp;COBA SEKARANG !</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="text-center content-section" id="about">
+    <section class="text-center content-section" id="about" style="background: #ededed;height: 680px;">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>About Angesa.id</h2>
-                    <p>Angesa.id is an Indonesia writing improvement platforms that correct contextual spelling errors, check for common grammatical errors, provide alternative word equivalents, and provide citation suggestions</p>
-                    <p>Angesa.id is a combination of two Sanskrit words, namely "Agem" which means Guidelines, "Basa" which means Language and the suffix ".id" is a domain name that aims as an identity for websites originating and intended for Indonesia.</p>
-                    <p>Philosophically, this brand is dedicated to assisting Indonesians in writing appropriate and effective sentences based on the General Guidelines for Indonesian Spelling (PUEBI).</p>
+            <div class="row" style="margin-top: -83px;">
+                <div class="col-lg-8 mx-auto" style="color: #222222;">
+                    <h2 data-aos="fade-up" data-aos-duration="600" data-aos-once="true" style="color: rgb(34, 34, 34);font-size: 40px;">About angesa.id</h2>
+                    <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" data-aos-once="true">Angesa.id, adalah penyedia platform peningkatan penulisan Bahasa Indonesia yang mengoreksi kesalahan ejaan kontekstual, memeriksa kesalahan tata bahasa umum, memberikan alternatif padanan kata, dan memberikan saran kutipan </p>
+                    <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" data-aos-once="true">Angesa.id merupakan gabungan dari dua kata bahasa Sansekerta yaitu “Agem” yang artinya Pedoman, “Basa” yang artinya Bahasa dan akhiran “.id” merupakan nama domain yang bertujuan sebagai identitas untuk website yang berasal dan ditujukan untuk  Indonesia</p>
+                    <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-once="true">Secara filosofis, merek ini didedikasikan untuk membantu masyarakat Indonesia dalam menulis kalimat yang tepat dan efektif berdasarkan Pedoman Umum Ejaan Bahasa Indonesia (PUEBI)</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="text-center download-section content-section" id="download" style="background-image:url('static/img/downloads-bg.jpg');">
+    <section class="text-center download-section content-section" id="antrian" style="background: url(&quot;static/img/write.png&quot;) center / cover;height: 675.088px;">
+        <div class="container" style="margin-top: -140px;">
+            <div class="col-lg-8 mx-auto">
+                <h1 data-aos="fade-up" data-aos-duration="600" data-aos-once="true" style="font-weight: bold;font-size: 40px;">Cara Kerja ?</h1>
+            </div>
+        </div>
+        <section style="margin: 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto col-sm-12 col-md-12 col-lg-4 col-xl-4" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100" data-aos-once="true" style="padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;width: 238.987px;">
+                        <div class="bg-light border rounded shadow card" data-bss-hover-animate="pulse"><img class="card-img-top" src="static/img/typo.png">
+                            <div data-aos="fade" class="card-body">
+                                <h3 class="card-title" style="font-family: Antic, sans-serif;color: rgb(81,87,94);">1</h3>
+                                <h5 class="card-sub-title" style="font-family: Antic, sans-serif;color: rgb(16,128,86);">Masukkan teks yang ingin dikoreksi</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto col-sm-12 col-md-12 col-lg-4 col-xl-4" data-aos="fade-right" data-aos-delay="200" data-aos-once="true" style="padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;margin-right: 0px;margin-bottom: 0px;">
+                        <div class="bg-light border rounded shadow card" data-bss-hover-animate="pulse"><img class="card-img-top" src="static/img/analisi.png">
+                            <div class="card-body">
+                                <h3 class="card-title" style="font-family: Antic, sans-serif;color: rgb(81,87,94);">2</h3>
+                                <h5 class="card-sub-title" style="font-family: Antic, sans-serif;color: rgb(16,128,86);">angesa.id akan mengoreksi teks<br></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto col-sm-12 col-md-12 col-lg-4 col-xl-4" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300" data-aos-once="true" style="padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;">
+                        <div class="bg-light border rounded shadow card" data-bss-hover-animate="pulse"><img class="card-img-top" src="static/img/correct.png">
+                            <div class="card-body">
+                                <h3 class="card-title" style="font-family: Antic, sans-serif;color: rgb(81,87,94);">3</h3>
+                                <h5 class="card-sub-title" style="font-family: Antic, sans-serif;color: rgb(16,128,86);">menampilkan teks yang sudah dikoreksi</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="text-center content-section" id="contact" style="font-size: 11px;color: rgb(34,34,34);background: #ededed;height: 724px;">
         <div class="container">
-            <div class="col-lg-12 mx-auto">
-                <h1>DEMO</h1>
-                <p>at this prototype stage, we just completed the typo and slang checker feature. However, other features will be available soon</p>
-                <a class="btn btn-primary btn-lg btn-default" type="button" href="{{ url_for('demo_page') }}">Visit demo page</a>
+            <div class="row" style="margin-top: -75px;">
+                <div class="col-lg-8 mx-auto">
+                    <h2 data-aos="zoom-in-up" data-aos-duration="600" data-aos-once="true" style="font-size: 40px;">HARGA</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="600" data-aos-delay="200" data-aos-once="true" style="border-radius: 24px;border-width: 2px;border-style: solid;max-width: 30%;height: 335.8px;">
+                    <p style="font-weight: bold;">GRATIS<br>-<br>Ejaan<br>Tata Bahasa<br>Tanda Baca<br><br><br></p>
+                    <a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" style="font-size: 19px;height: 61.2px;color: rgb(16,128,86);border-color: rgb(16,128,86);width: 178px;padding-top: 14px;" href="{{ url_for('demo_free_page') }}"><span class="network-name" style="font-size: 15px;">GRATIS</span></a>
+                </div>
+                <div class="col-md-4 col-lg-4" data-aos="zoom-in-left" data-aos-duration="600" data-aos-delay="100" data-aos-once="true" style="border-radius: 24px;border-width: 2px;border-style: solid;max-width: 30%;margin-right: 40px;margin-left: 40px;height: 335.8px;">
+                    <p style="color: rgb(34, 34, 34);font-weight: bold;">PREMIUM<br>-<br>+ Sugesti thesaurus<br>+ Pembenaran judul, singkatan dan nama<br>+ Sugesti kalimat efektif<br>+ Kefasihan<br></p>
+                    <a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" href="{{ url_for('comming_soon_page') }}" style="font-size: 13px;height: 61.2px;border-color: rgb(16,128,86);width: 178px;padding-top: 16px;"><span class="network-name" style="color: rgb(16,128,86);font-size: 16px;">&nbsp;Rp 60.000/bulan</span></a>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="600" data-aos-once="true" style="border-radius: 24px;border-width: 2px;border-style: solid;max-width: 30%;height: 335.8px;">
+                    <p style="font-weight: bold;">BISNIS<br>-<br>+ Multiple user<br>+ Sugesti kalimat formal<br>+ Sentiment analisis<br>+ Penolong pembuatan surat<br><br></p>
+                    <a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" style="font-size: 15px;height: 61.2px;border-color: rgb(16,128,86);width: 178px;padding-top: 16px;" href="{{ url_for('comming_soon_page') }}"><span class="network-name" style="color: rgb(16,128,86);">&nbsp;Rp 100.000/bulan</span></a>
+                </div>
             </div>
         </div>
     </section>
-    <section class="text-center content-section" id="contact">
+    <section class="text-center content-section" id="kontak" style="background: url(&quot;static/img/computahhhhh.png&quot;) center / cover;">
         <div class="container">
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-duration="650" data-aos-once="true" style="background: #e8e8e871;border-radius: 75px;padding-top: 20px;padding-bottom: 20px;">
                 <div class="col-lg-8 mx-auto">
-                    <h2>Lets Talk</h2>
-                    <p>Feel free to leave us a comment to give some feedback about this product!</p>
+                    <h2 style="color: rgb(34,34,34);font-size: 40px;font-weight: bold;font-style: normal;padding-bottom: 10px;">kontak</h2>
+                    <p style="color: rgb(34,34,34);font-size: 24px;margin-top: -33px;">Silahkan memberikan saran dan&nbsp;<br>&nbsp;mengenai produk kami !</p>
                     <ul class="list-inline banner-social-buttons">
                         <li class="list-inline-item">&nbsp;</li>
-                        <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-twitter fa-fw"></i><span class="network-name">&nbsp;Twitter</span></button></li>
-                        <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-github fa-fw"></i><span class="network-name">&nbsp;github</span></button></li>
+                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" href="{{ url_for('comming_soon_page') }}" style="width: 195px;height: 60.6px;border-width: 3px;border-color: rgb(15,128,86);"><i class="fa fa-twitter fa-fw" style="color: rgb(15,128,86);font-size: 24px;"></i><span class="network-name" style="border-width: 18px;color: rgb(15,128,86);font-size: 24px;">&nbsp;Twitter</span></a></li>
+                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" href="https://github.com/AngesaID/Angesa_id" style="width: 195px;height: 60.6px;color: rgb(15,128,86);border-width: 3px;border-color: rgb(15,128,86);"><i class="fa fa-github fa-fw" style="font-size: 24px;"></i><span class="network-name" style="font-size: 24px;">&nbsp;github</span></a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </div><a class="cd-top" href="" style="border-radius: 13px;"> </a>
     </section>
     <div class="map-clean"></div>
-    <footer>
+    <footer style="background: #ededed;padding: 16px 0px;">
         <div class="container text-center">
-            <p>Copyright ©&nbsp;Angesa.id 2021</p>
+            <p style="color: rgb(34,34,34);font-weight: bold;">Copyright ©&nbsp;Angesa.id 2021</p>
         </div>
     </footer>
-    <script src="{{ url_for('static', filename='js/jquery.min.js'  ) }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bs-init.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/Scroll-to-top-1.js') }}"></script>
 </body>
 
 </html>

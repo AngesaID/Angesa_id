@@ -10,8 +10,12 @@ from src.models import typechecker
 def home_page():
     return render_template('index.html')
 
+@app.route('/coming-soon')
+def comming_soon_page():
+    return render_template('coming-soon.html')
+
 @app.route('/demo', methods=["POST", "GET"])
-def demo_page():
+def demo_free_page():
     if request.method == "POST":
         text = request.form.get("inputtext")
         

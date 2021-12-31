@@ -2232,6 +2232,12 @@
  textarea.form-control {
      height: auto
  }
+
+ textarea.form-control:focus {
+    outline: 1px;
+    border-color: #0f8056;
+    box-shadow: 0 0 px #0f8056;
+}
  
  .form-group {
      margin-bottom: 1rem
@@ -2972,14 +2978,14 @@
  }
  
  .btn-outline-primary {
-     color: #42dca3;
-     border-color: #42dca3
+     color: #0f8056;
+     border-color: #0f8056
  }
  
  .btn-outline-primary:hover {
      color: #212529;
      background-color: #42dca3;
-     border-color: #42dca3
+     border-color: #0f8056
  }
  
  .btn-outline-primary.focus,
@@ -2989,7 +2995,7 @@
  
  .btn-outline-primary.disabled,
  .btn-outline-primary:disabled {
-     color: #42dca3;
+     color: #0f8056;
      background-color: transparent
  }
  
@@ -10563,7 +10569,7 @@
      font-family: Lora, Helvetica Neue, Helvetica, Arial, sans-serif;
      position: relative;
      color: #fff;
-     background-color: #000
+     background-color: #ededed
  }
  
  body,
@@ -10810,12 +10816,12 @@
  ::-moz-selection {
      background: #fcfcfc;
      background: hsla(0, 0%, 100%, .2);
-     text-shadow: none;
+     text-shadow: none
  }
  
  ::selection {
-     background: #ced4da;
-     text-shadow: none;
+    background: #ced4da;
+    text-shadow: none;
  }
  
  img::selection {
@@ -10839,10 +10845,15 @@
      border: none;
      background: none
  }
-
  textarea {
     resize: none;
   }
+
+textarea:focus {
+    outline: 1px;
+    border-color: #007bff;
+    box-shadow: 0 0 10px blue;
+}
 
   .tooltip {
     position: relative;
