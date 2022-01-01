@@ -1451,7 +1451,8 @@
      .col-lg-8 {
          -ms-flex: 0 0 66.66667%;
          flex: 0 0 66.66667%;
-         max-width: 66.66667%
+         max-width: 66.66667%;
+         color: black;
      }
      .col-lg-9 {
          -ms-flex: 0 0 75%;
