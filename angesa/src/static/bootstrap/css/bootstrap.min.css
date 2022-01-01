@@ -3305,7 +3305,8 @@
  
  .btn-block {
      display: block;
-     width: 100%
+     width: 100%;
+     border: 3px solid
  }
  
  .btn-block+.btn-block {

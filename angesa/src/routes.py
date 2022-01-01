@@ -14,6 +14,10 @@ def home_page():
 def comming_soon_page():
     return render_template('coming-soon.html')
 
+@app.route('/login')
+def login_page():
+    return render_template('login.html')
+
 @app.route('/demo', methods=["POST", "GET"])
 def demo_free_page():
     if request.method == "POST":

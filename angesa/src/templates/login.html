@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Angesa.id</title>
+    <title>Angesa.id</title>
     <meta name="description" content="Angesa.id, is an Indonesia writing assistant platforms that correct contextual spelling errors, check for common grammatical errors, provide alternative word equivalents, and provide citation suggestions based on website application and extensions powered by Artificial Intelligence (AI).">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
@@ -21,74 +21,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Newsletter-Subscription-Form.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Scroll-to-top-1.css') }}">
-    <link href = "static/img/icon.png"
-    rel = "static/img/icon.png">
-
-    <script type="text/javascript">
-        function success() {
-            if(document.getElementById("inputtext").value==="" && document.getElementById("inputtext").value<=3) { 
-                   document.getElementById('button').disabled = true; 
-               } else { 
-                   document.getElementById('button').disabled = false;
-               }
-           }
-
-        function copy() {
-            /* Get the text field */
-            var copyText = document.getElementById("outputtext");
-          
-            /* Select the text field */
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); /* For mobile devices */
-          
-             /* Copy the text inside the text field */
-            navigator.clipboard.writeText(copyText.value);
-          
-          }
-
-          function copy() {
-            let textarea = document.getElementById("outputtext");
-            textarea.select();
-            document.execCommand("copy");
-          }
-
-    </script>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}"/>
 </head>
-<body id="page-top" >
+
+<body>
     <nav class="navbar navbar-light navbar-expand-md fixed-top" data-aos="slide-down" data-aos-duration="600" data-aos-once="true" id="mainNav" style="color: rgb(0,0,0);background: #ededed;border-style: none;height: 85.4px;">
         <div class="container"><a class="navbar-brand js-scroll-trigger" href="{{ url_for('home_page') }}" style="color: #222222;border-style: none;font-family: 'DM Serif Display', serif;font-size: 27px;">Angesa.id</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu" style="color: #222222;border-style: none;"><i class="fa fa-bars" style="color: #222222;border-style: none;"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive" style="color: #222222;border-style: none;">
                 <ul class="navbar-nav ml-auto" style="color: #222222;border-style: none;">
                     <li class="nav-item nav-link js-scroll-trigger" style="color: #222222;border-style: none;font-size: 18px;"><a class="nav-link d-lg-flex align-items-lg-center js-scroll-trigger" data-bss-hover-animate="pulse" href="{{ url_for('home_page') }}" style="color: #222222;border-style: none;font-size: 18px;"><i class="fa fa-arrow-circle-left" style="font-size: 20px;margin: 4px;"></i>kembali</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger" style="color: #222222;border-style: none;font-size: 18px;"><a class="nav-link js-scroll-trigger" data-bss-hover-animate="pulse" href="{{ url_for('login_page') }}" style="color: #ededed;border-style: none;background: #0f8056;border-radius: 12px;font-size: 18px;">sign in</a></li>
-
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="text-center download-section content-section" id="download" style="background: #ededed">
-        <div class="container" style="background: rgba(255,255,255,0.56);border-radius: 14px;height: 480px;">
-            <div class="col-lg-12 mx-auto" style="color: #222222;">
-                <h1 class="d-lg-flex justify-content-lg-center align-items-lg-center" style="color: #222222;border-radius: 14px;height: 90px;">Pemeriksa bahasa (beta)</h1>
-                <h6>program ini masih dalam tahap prototipe</h6>
-                <form class="form-horizontal" method="POST">
-                    <div class="row">
-                    <div class="col-sm-4 col-md-7">
-                        <textarea class="form-control" rows="7" id="inputtext" name="inputtext" rows="7" spellcheck="false" placeholder="Try 'Unyil prg ke j4karta utk men1mba 1lmu'" onkeyup="success()" maxlength="350" minlength="5" value={{ initialtext }}>{{ initialtext }}</textarea>
-                        <br>
-                        <button class="btn btn-lg btn-outline-primary rounded-lg" id="button" style = "width:100%" type="submit" disabled>Submit</button>
+    <section class="ftco-section">
+        <div class="container">
+           <div class="row justify-content-center">
+              <div class="col-md-7 col-lg-5">
+                 <div class="wrap">
+                    <div class="login-wrap p-4 p-md-5">
+                       <div class="d-flex">
+                          <div class="w-100">
+                             <h3 class="mb-4" style="font-weight: bold;">Sign in</h3>
+                          </div>
+                       </div>
+                       <form action="{{ url_for('comming_soon_page') }}" class="signin-form" >
+                          <div class="form-group mt-3">
+                             <input type="text" class="form-control" required>
+                             <label class="form-control-placeholder" for="username">Username</label>
+                          </div>
+                          <div class="form-group">
+                             <input id="password-field" type="password" class="form-control" required>
+                             <label class="form-control-placeholder" for="password">Password</label>
+                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                          </div>
+                          <div class="form-group">
+                             <button type="submit" class="btn btn-primary btn-block p-2 rounded" href="{{ url_for('comming_soon_page') }}">Sign In</button>
+                          </div>
+                          <div class="form-group d-md-flex">
+                             <div class="w-50 text-left">
+                                <label class="checkbox-wrap checkbox-primary mb-0" href="{{ url_for('comming_soon_page') }}">Remember Me
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                </label>
+                             </div>
+                             <div class="w-50 text-md-right">
+                                <a href="{{ url_for('comming_soon_page') }}">Forgot Password</a>
+                             </div>
+                          </div>
+                       </form>
                     </div>
-                    <div class="col-sm-4 col-md-5">
-                        <textarea class="form-control" rows="7" id="outputtext" placeholder="Output text here..." onkeyup="output()" readonly>{{ finaltext }}</textarea>
-                        <br>
-                        <button class="btn btn-lg btn-outline-primary rounded-lg" id="buttoncopy" style = "width:100%" type="button" onclick="copy()" >Copy Text</button>
-                    </div>
-                </form>
-            </div>
+                 </div>
+              </div>
+           </div>
         </div>
-    </section>
-    <div class="map-clean"></div>
+     </section>
+
+
     <footer style="background: #ededed;padding: 16px 0px;">
         <div class="container text-center">
             <p style="color: rgb(34,34,34);font-weight: bold;">Copyright ©&nbsp;Angesa.id 2021</p>
@@ -101,6 +91,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
         <script src="{{ url_for('static', filename='js/Scroll-to-top-1.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>
