@@ -2658,9 +2658,9 @@
  }
  
  .btn-primary {
-     color: #212529;
-     background-color: #42dca3;
-     border-color: #42dca3
+     color: #0f8056;
+     background-color: transparent;
+     border-color: #0f8056
  }
  
  .btn-primary.focus,
@@ -6997,7 +6997,7 @@
  }
  
  .bg-primary {
-     background-color: #42dca3!important
+     background-color: #0f8056!important
  }
  
  a.bg-primary:focus,
@@ -10372,7 +10372,7 @@
  }
  
  .text-primary {
-     color: #42dca3!important
+     color: #0f8056!important
  }
  
  a.text-primary:focus,
@@ -10892,3 +10892,30 @@ textarea:focus {
     visibility: visible;
     opacity: 1;
   }
+
+  .rounded-lg-price {
+    border-radius: 1rem !important;
+    background-color: transparent;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
+  }
+  
+  .text-small {
+    font-size: 18px !important;
+  }
+  
+  .custom-separator {
+    width: 5rem;
+    height: 6px;
+    border-radius: 1rem;
+  }
+  
+  .text-uppercase {
+    letter-spacing: 0.2em;
+  }
+
+  .mb-3-hidden {
+      color: transparent;
+  }
+
+  
+

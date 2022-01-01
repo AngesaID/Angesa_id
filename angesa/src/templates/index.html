@@ -100,30 +100,83 @@
             </div>
         </section>
     </section>
-    <section class="text-center content-section" id="contact" style="font-size: 11px;color: rgb(34,34,34);background: #ededed;height: 724px;">
+    <section class="text-center content-section" id="contact" style="font-size: 11px;color: rgb(34,34,34);background: #ededed;">
         <div class="container">
             <div class="row" style="margin-top: -75px;">
-                <div class="col-lg-8 mx-auto">
-                    <h2 data-aos="zoom-in-up" data-aos-duration="600" data-aos-once="true" style="font-size: 40px;">HARGA</h2>
-                </div>
+               <div class="col-lg-8 mx-auto">
+                  <h2 data-aos="zoom-in-up" data-aos-duration="600" data-aos-once="true" style="font-size: 40px;">HARGA</h2>
+               </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="600" data-aos-delay="200" data-aos-once="true" style="border-radius: 24px;border-width: 2px;border-style: solid;max-width: 30%;height: 335.8px;">
-                    <p style="font-weight: bold;">GRATIS<br>-<br>Ejaan<br>Tata Bahasa<br>Tanda Baca<br><br><br></p>
-                    <a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" style="font-size: 19px;height: 61.2px;color: rgb(16,128,86);border-color: rgb(16,128,86);width: 178px;padding-top: 14px;" href="{{ url_for('demo_free_page') }}"><span class="network-name" style="font-size: 15px;">GRATIS</span></a>
-                </div>
-                <div class="col-md-4 col-lg-4" data-aos="zoom-in-left" data-aos-duration="600" data-aos-delay="100" data-aos-once="true" style="border-radius: 24px;border-width: 2px;border-style: solid;max-width: 30%;margin-right: 40px;margin-left: 40px;height: 335.8px;">
-                    <p style="color: rgb(34, 34, 34);font-weight: bold;">PREMIUM<br>-<br>+ Sugesti thesaurus<br>+ Pembenaran judul, singkatan dan nama<br>+ Sugesti kalimat efektif<br>+ Kefasihan<br></p>
-                    <a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" href="{{ url_for('comming_soon_page') }}" style="font-size: 13px;height: 61.2px;border-color: rgb(16,128,86);width: 178px;padding-top: 16px;"><span class="network-name" style="color: rgb(16,128,86);font-size: 16px;">&nbsp;Rp 60.000/bulan</span></a>
-                </div>
-                <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="600" data-aos-once="true" style="border-radius: 24px;border-width: 2px;border-style: solid;max-width: 30%;height: 335.8px;">
-                    <p style="font-weight: bold;">BISNIS<br>-<br>+ Multiple user<br>+ Sugesti kalimat formal<br>+ Sentiment analisis<br>+ Penolong pembuatan surat<br><br></p>
-                    <a class="btn btn-primary btn-lg btn-default rounded-lg" role="button" style="font-size: 15px;height: 61.2px;border-color: rgb(16,128,86);width: 178px;padding-top: 16px;" href="{{ url_for('comming_soon_page') }}"><span class="network-name" style="color: rgb(16,128,86);">&nbsp;Rp 100.000/bulan</span></a>
-                </div>
+         </div>
+         <div class="container">
+            <div class="row text-center align-items-end">
+               <div class="col-lg-4 mb-5 mb-lg-0">
+                  <div class="p-5 rounded-lg-price" id="price1">
+                     <h1 class="h6 text-uppercase font-weight-bold mb-4">Basic</h1>
+                     <h2 class="h1 font-weight-bold">GRATIS</h2>
+                     <div class="custom-separator my-4 mx-auto bg-primary"></div>
+                     <ul class="list-unstyled my-5 text-small text-left" style="font-weight: bold; font-family: 'Arial'; font-size: 25px;">
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Typo
+                        </li>
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Slang
+                        </li>
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Formal
+                        </li>
+                        <li class="mb-3-hidden">
+                            <i ></i>test
+                         </li>
+                     </ul>
+                     <a href="{{ url_for('demo_free_page') }}" class="btn btn-primary btn-block p-3 rounded">Berlangganan</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 mb-5 mb-lg-0">
+                  <div class="p-5 rounded-lg-price" id="price1">
+                     <h1 class="h6 text-uppercase font-weight-bold mb-4">Premium</h1>
+                     <h2 class="h1 font-weight-bold">Rp 60K<span class="text-small font-weight-normal ml-2">/ Bulan</span></h2></h2>
+                     <div class="custom-separator my-4 mx-auto bg-primary"></div>
+                     <ul class="list-unstyled my-5 text-small text-left" style="font-weight: bold; font-family: 'Arial'; font-size: 25px;">
+                        <li class="mb-3">
+                            <i class="fa fa-check mr-2 text-primary"></i> Fitur Gratis
+                         </li>
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Thesaurus
+                        </li>
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Kalimat Efektif
+                        </li>
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Kefasihan
+                        </li>
+                     </ul>
+                     <a href="#" class="btn btn-primary btn-block p-3 rounded">Berlangganan</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 mb-5 mb-lg-0">
+                  <div class="p-5 rounded-lg-price" id="price1">
+                     <h1 class="h6 text-uppercase font-weight-bold mb-4">Bisnis</h1>
+                     <h2 class="h1 font-weight-bold">Rp 100K<span class="text-small font-weight-normal ml-2">/ Bulan</span></h2></h2>                     <div class="custom-separator my-4 mx-auto bg-primary"></div>
+                     <ul class="list-unstyled my-5 text-small text-left" style="font-weight: bold; font-family: 'Arial'; font-size: 25px;">
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Fitur Gratis + Premium
+                        </li>
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Banyak Pengguna
+                        </li>
+                        <li class="mb-3">
+                           <i class="fa fa-check mr-2 text-primary"></i> Analisis Sentimen
+                        </li>
+                        <li class="mb-3">
+                            <i class="fa fa-check mr-2 text-primary"></i> Pembuatan Surat
+                         </li>
+                     </ul>
+                     <a href="#" class="btn btn-primary btn-block p-3 rounded">Berlangganan</a>
+                  </div>
+               </div>
             </div>
-        </div>
+         </div>
     </section>
     <section class="text-center content-section" id="kontak" style="background: url(&quot;static/img/computahhhhh.png&quot;) center / cover;">
         <div class="container">
