@@ -10919,5 +10919,9 @@ textarea:focus {
       color: transparent;
   }
 
+  .text-left-disclaimer {
+      color: gray;
+  }
+
   
 
