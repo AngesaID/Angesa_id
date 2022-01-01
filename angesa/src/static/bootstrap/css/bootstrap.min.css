@@ -2667,8 +2667,8 @@
  .btn-primary:focus,
  .btn-primary:hover {
      color: #212529;
-     background-color: #27d192;
-     border-color: #25c68a
+     background-color: #42dca3;
+     border-color: #42dca3
  }
  
  .btn-primary.focus,
@@ -2747,8 +2747,8 @@
  .btn-success:focus,
  .btn-success:hover {
      color: #fff;
-     background-color: #218838;
-     border-color: #1e7e34
+     background-color: #42dca3;
+     border-color: #42dca3
  }
  
  .btn-success.focus,
@@ -2759,8 +2759,8 @@
  .btn-success.disabled,
  .btn-success:disabled {
      color: #fff;
-     background-color: #28a745;
-     border-color: #28a745
+     background-color: #42dca3;
+     border-color: #42dca3
  }
  
  .btn-success:not(:disabled):not(.disabled).active,
